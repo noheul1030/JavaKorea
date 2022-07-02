@@ -24,5 +24,21 @@ public class Oper6 {
 		System.out.println(num3);
 		num3--;		// num3 -= 1;
 		System.out.println(num3);
+		
+		/*
+		 int num = 0;
+		 
+		 num++;			; 끝난 후 +1 해서 저장
+		 ++num;			; 끝나기 전에 +1 해서 저장
+		 num--;			; 끝난 후 -1 해서 저장
+		 --num;			; 끝나기 전에 -1 해서 저장
+		 
+		 */
+		// num3 == 5
+		System.out.println("더하기 이전 : "+num3);				//5
+		System.out.println(num3++);					// ?
+		System.out.println("더하기 후 : "+num3);				//6
+		// 앞에 있으면 그 문장 실행중에 +1
+		// 뒤에 있으면 그 문장 끝나 후 다음문장부터 +1
 	}
 }
