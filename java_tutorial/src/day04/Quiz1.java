@@ -27,13 +27,13 @@ public class Quiz1 {
 		
 		String 수도 = "서울";
 		Scanner nc = new Scanner(System.in);
-				String 수도_nc;
+		String 수도_nc;
 				
 		for (int i = 1; i < i+1; i++) {
 			System.out.println("대한민국 수도 입력 >>> ");
 			수도_nc = nc.next();
 			
-			if(수도.equals("0")) {
+			if(수도_nc.equals("0")) {
 				System.out.println("게임을 종료합니다.");
 				break;	
 			}
@@ -41,7 +41,7 @@ public class Quiz1 {
 				System.out.println("정답입니다!");
 				break;
 			}
-			else if(!(수도.equals(수도_nc))) {
+			else {
 				System.out.println("틀렸습니다.");
 			}
 			
