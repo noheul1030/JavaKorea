@@ -66,6 +66,18 @@ class Human{
 	double height;
 	
 	void 정보입력(String 이름, String 성별, int 나이, double 키) {
+		
+		/* // this. 을 붙이면 클래스에 있는 걸 사용
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+		this.height = height;
+		
+		String 정보출력() {
+			return name+"의 정보 : "+age+sex+height;
+		
+		 */
+		
 		name = 이름;
 		sex = 성별;
 		age = 나이;
