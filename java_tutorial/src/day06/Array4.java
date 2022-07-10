@@ -36,6 +36,7 @@ class Array4Ex{
 			}
 			if(flag == 1) {
 				System.out.println("해당 국가는 없습니다.");
+				break;
 			}
 		}
 	}
