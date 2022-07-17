@@ -34,5 +34,9 @@ class ReviewClass{
 			System.out.println(num[i]);
 		}
 	}
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> a8a5e5f56901c88181b8ed773e2d89d78ed9c81c
