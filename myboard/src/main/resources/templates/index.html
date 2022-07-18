@@ -6,6 +6,17 @@
 </head>
 <body>
 스프링 실행 완료!
-<h1 th:text="${user}"></h1>
+<table>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+	</tr>
+	<tr th:each="user:${user}">
+		<td th:text="${user.first_name}"></td>
+		<td th:text="${user.last_name}"></td>
+		<td th:text="${user.email}"></td>
+	</tr>
+</table>
 </body>
 </html>
