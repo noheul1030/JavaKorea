@@ -5,6 +5,7 @@ public class StringClass2 {
 		String info1 = "STAname=A01price=001000num=02ED";
 		String info2 = "STAname=A02price=001500num=04ED";
 		String info3 = "STAname=E01price=002500num=04ED";
+		
 		Quiz2 q2 = new Quiz2();
 		q2.go(info1);			// 에스프레소 2잔 주문, 2000원
 		q2.go(info2);			// 카페라떼 4잔 주문, 6000원
@@ -13,8 +14,6 @@ public class StringClass2 {
 }
 
 class Quiz2{
-	String info1 = "STAname=A01price=001000num=02ED";
-	String info2 = "STAname=A02price=002000num=01ED";
 	// info는 주문 내역 (통신패킷)
 	// 보안을 위해서 시작은 무조건 STA로 시작, 마지막은 ED로 끝나야함
 	
@@ -28,22 +27,25 @@ class Quiz2{
 		String 가격 = "";
 		String 상품명 = "";
 		
-		int price = Integer.parseInt(가격);
-		int num = Integer.parseInt(수량);
-		
 		int idx = 0;
 		
-		idx = info1.indexOf("2");
-		idx = info1.indexOf("1000");
-		idx = info1.indexOf("A01");
+		idx = str.indexOf("num");
+		수량 = str.substring(idx+"num".length()+1, idx+6);
+		
+		idx = str.indexOf("price");
+		가격 = str.substring(idx+"price".length()+1, idx+12);
+		
+		idx = str.indexOf("name");
+		상품명 = str.substring(idx+"name".length()+1, idx+8);
+		
+		
+		int price = Integer.parseInt(가격);
+		int num = Integer.parseInt(수량);
 
-		수량 = info1.substring(idx, idx+1);
-		가격 = info1.substring(idx, idx+4);
-		상품명 = info1.substring(idx, idx+4);
+		상품명 = 상품명.replace("A01", "에스프레소");
+		상품명 = 상품명.replace("A02", "아메리카노");
+		상품명 = 상품명.replace("E01", "오렌지주스");
 		
-		상품명 = info1.replace("A01", "에스프레소");
-		
-		System.out.println(상품명+수량+"잔 주문, "+price*num+"원");
+		System.out.println(상품명+" "+수량+"잔 주문, "+price*num+"원");
 	}
 }
-	
