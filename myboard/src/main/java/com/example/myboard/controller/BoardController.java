@@ -3,6 +3,7 @@ package com.example.myboard.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.myboard.service.UserService;
 
@@ -21,8 +22,12 @@ public class BoardController {
 		model.addAttribute("user", userservice.getAllUser());
 		return "index";		// index.html 로 이동
 	}
+	@GetMapping("/edit/{id}")		
+	public String editPage(Model model/*, @PathVariable Long id*/) {
+		//model.addAllAttributes("user", userService.getUserById(id));
+		return "edit";			// edit.html
+	}
 }
-
 // .model
 // .repository
 // .service

@@ -25,5 +25,10 @@ public class UserServiceimpl implements UserService{
 	public List<User> getAllUser(){
 		return user.findAll();			// 상속받은 인터페이스의 함수를 오버라이딩
 	}
+
+	@Override
+	public User getUserById(Long id) {
+		return user.findById(id).get();
+	}
 	
 }
